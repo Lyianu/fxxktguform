@@ -2,7 +2,7 @@ const statusTable = document.querySelector("#statusTable");
 const dateNode = document.querySelector("#date");
 
 async function getData(id) {
-    fetch('http://localhost/status/' + id, {method: 'GET'}).then((response) => response.json()).then((data) => showEntity(data));
+    fetch('http://' + window.location.hostname + '/status/' + id, {method: 'GET'}).then((response) => response.json()).then((data) => showEntity(data));
     await sleep(1000);
 }
 

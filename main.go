@@ -19,7 +19,7 @@ func setupRouter() *gin.Engine {
 	r := gin.Default()
 
 	r.GET("/status/:id", idChecker)
-	r.Static("/fxxkform", "./fxxkform")
+	r.Static("/fxxkform", "./static")
 
 	return r
 }
